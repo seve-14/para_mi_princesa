@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('van\ gogh.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imagen-container {
+    position: relative;
+}
+
+.mi-novia {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 1; /* Asegura que la imagen esté arriba */
+}
+
+.luces {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 15px; /* Bordes redondeados */
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.3), rgba(0, 255, 0, 0.3), rgba(0, 0, 255, 0.3));
+    animation: luces 2s infinite alternate;
+    z-index: 0; /* Asegura que las luces estén detrás de la imagen */
+}
+
+@keyframes luces {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.titulo {
+    margin: 20px 0 10px;
+    font-size: 2em; /* Aumenta el tamaño del texto del título */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Añade sombra al texto */
+}
+
+.descripcion {
+    max-width: 600px;
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente */
+    line-height: 1.5;
+    padding: 0 20px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5); /* Sombra opcional para el texto */
+}
